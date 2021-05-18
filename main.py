@@ -4,6 +4,7 @@ import progressbar
 import ctypes 
 from time import sleep
 from progressbar.progressbar import ProgressBar
+import random
 
 class Pakt_Init: # putting it in class because oop autism
     # white space because clean code
@@ -28,12 +29,14 @@ class Pakt_Init: # putting it in class because oop autism
             # more white space because clean code
             pakt_init_progress_bar.update(i+1) # updating progress bar
             sleep(0.025)
+            if random.randint(0, 100) < 75: # generate random number
+                sleep(2) # do important init shit here
         pakt_init_progress_bar.finish() # finish progress bar (same with ur mother)
         # more white space because clean code 
         print("Pakt Init is done initializing the system.") # we are done
         ctypes.string_at(0) # segfault python because FUCK YOU
-        
-        
-pakt_init_object = Pakt_Init()
-
-pakt_init_object.pakt_init("penis", True)
+# more white space because clean code 
+# more white space because clean code         
+pakt_init_object = Pakt_Init() # create pakt init object with name explicitly denoting it's status as such
+# more white space because clean code 
+pakt_init_object.pakt_init("penis", True) # run pakt init with parameters which absolutely are important
